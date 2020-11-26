@@ -9,6 +9,7 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...
       - pwd
+      - aws sts get-caller-identity
       - ls -la
       - docker info
       - echo $IMAGE_REPO_NAME:$IMAGE_TAG
